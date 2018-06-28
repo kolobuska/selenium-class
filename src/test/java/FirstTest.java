@@ -21,19 +21,18 @@ public class FirstTest {
         System.out.println("this is test1");
     }
 
-    @Test
-    public void test2(){
-        Assert.assertTrue(false);
-    }
-
     @BeforeMethod
     public void beforeEveryTest(){
         System.out.println("I'm running before each test");
     }
 
     @Test(dependsOnMethods = "test2", alwaysRun = true)
-    public void bcd(){
+    public void myTest(){
         System.out.println("this is test 2");
     }
 
+    @Test
+    public void bcdef(){
+        System.out.println("this is test 2");
+    }
 }
